@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./fake-news-api
+    container_name: fake-news-api
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    build: ./fake-news-ui
+    container_name: fake-news-ui
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend

@@ -1,0 +1,16 @@
+[project]
+name = "fake-news-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.13.4",
+    "fastapi>=0.116.0",
+    "lxml-html-clean>=0.4.2",
+    "newspaper3k>=0.2.8",
+    "requests>=2.32.4",
+    "torch>=2.7.1",
+    "transformers>=4.53.1",
+    "uvicorn>=0.35.0",
+]
